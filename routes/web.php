@@ -20,9 +20,9 @@ Route::get('/', [PageController::class, 'index'])->name('home');
 
 Route::middleware(['auth', 'verified'])
     ->prefix('admin')
-    ->name('.admin')
+    ->name('admin.')
     ->group(function(){
-        Route::get('/', [DashboardController::class, 'index'])->name('home');
+        Route::get('/', [DashboardController::class, 'index'])->name('index');
     });
 
 Route::middleware('auth')->group(function () {
