@@ -20,7 +20,7 @@
                     <tr>
                         <th> {{ $project->id }} </th>
                         <td> {{ $project->title }} </td>
-                        <td> {{ $project->start_date }} </td>
+                        <td> {{ ($project->start_date)->format('d/m/Y') }} </td>
                         <td> {{ $project->status }} </td>
                         <td class="text-center">
                             <a href="{{route('admin.projects.show', $project)}}" class="btn btn-success">

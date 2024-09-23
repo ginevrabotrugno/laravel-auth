@@ -20,12 +20,12 @@
         <ul class="list-group list-group-flush m-3">
             <li class="list-group-item">
                 <strong>Data di Inizio: </strong>
-                <span> {{ $project->start_date }} </span>
+                <span> {{ ($project->start_date)->format('d/m/Y') }} </span>
             </li>
             @if ($project->end_date)
                 <li class="list-group-item">
                     <strong>Data di Fine: </strong>
-                    <span> {{ $project->end_date }} </span>
+                    <span> {{ ($project->end_date)->format('d/m/Y') }} </span>
                 </li>
             @endif
             <li class="list-group-item">
