@@ -1,7 +1,8 @@
 <header class="bg-dark">
     <nav class="navbar navbar-expand-md bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
+            <a class="navbar-brand" href="{{ route('home') }}">
+                PORTFOLIO
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -11,9 +12,9 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
-                    </li>
+                    </li> --}}
                 </ul>
 
                 <!-- Right Side Of Navbar -->
