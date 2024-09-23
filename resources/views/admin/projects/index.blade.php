@@ -23,7 +23,7 @@
                         <td> {{ $project->start_date }} </td>
                         <td> {{ $project->status }} </td>
                         <td class="text-center">
-                            <a href="#" class="btn btn-success">
+                            <a href="{{route('admin.projects.show', $project)}}" class="btn btn-success">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                             <a href="#" class="btn btn-warning">
