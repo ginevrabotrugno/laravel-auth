@@ -13,27 +13,34 @@
             </a>
         </h1>
 
-        <h5 class="mx-4"> {{ $project->technologies }} </h5>
+        @if ($project->technologies)
+            <h5 class="mx-4"> {{ $project->technologies }} </h5>
+        @endif
 
-        <ul class="list-group list-group-flush my-4">
+        <ul class="list-group list-group-flush m-3">
             <li class="list-group-item">
                 <strong>Data di Inizio: </strong>
                 <span> {{ $project->start_date }} </span>
             </li>
-            <li class="list-group-item">
-                <strong>Data di Fine: </strong>
-                <span> {{ $project->end_date }} </span>
-            </li>
+            @if ($project->end_date)
+                <li class="list-group-item">
+                    <strong>Data di Fine: </strong>
+                    <span> {{ $project->end_date }} </span>
+                </li>
+            @endif
             <li class="list-group-item">
                 <strong>Stato: </strong>
                 <span> {{ $project->status }} </span>
             </li>
-            <li class="list-group-item">
-                <a href="{{ $project->project_url }}">Link Progetto</a>
-            </li>
+            @if ($project->project_url)
+                <li class="list-group-item">
+                    <a href="{{ $project->project_url }}">Link Progetto</a>
+                </li>
+            @endif
         </ul>
 
-        <p class="my-4">
+        <h3>Descrizione</h3>
+        <p class="m-4">
             {{ $project->description }}
         </p>
 
