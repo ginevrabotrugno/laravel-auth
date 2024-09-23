@@ -3,6 +3,11 @@
 @section('content')
 
     <div class="container my-4">
+        @if (session('created'))
+            <div class="alert alert-success" role="alert">
+                {{ session('created') }}
+            </div>
+        @endif
         <h1>
             {{ $project->title }}
             <a href="#" class="btn btn-warning">
