@@ -1,28 +1,21 @@
 <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="height: 100%">
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="#" class="nav-link text-white" text-white>
-                Home
+            <a href=" {{ route('admin.index') }} " class="nav-link text-white">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href=" {{ route('admin.projects.index') }} " class="nav-link text-white">
+                <i class="fa-solid fa-list"></i>
+                <span>Projects</span>
             </a>
         </li>
         <li>
             <a href="#" class="nav-link text-white">
-                Dashboard
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link text-white">
-                Orders
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link text-white">
-                Products
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link text-white">
-                Customers
+                <i class="fa-solid fa-square-plus"></i>
+                <span>New</span>
             </a>
         </li>
     </ul>

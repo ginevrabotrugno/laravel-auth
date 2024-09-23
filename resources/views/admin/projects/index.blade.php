@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container my-4">
-        <h1>I MIEI PROGETTI</h1>
+        <h1 class="my-5">I MIEI PROGETTI</h1>
 
         <table class="table">
             <thead>
