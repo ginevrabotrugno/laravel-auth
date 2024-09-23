@@ -7,6 +7,7 @@ use App\Http\Requests\ProjectsRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Functions\Helper;
+use SebastianBergmann\CodeCoverage\Report\Xml\Project as XmlProject;
 
 class ProjectsController extends Controller
 {
@@ -72,8 +73,10 @@ class ProjectsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Project $project)
     {
-        //
+        $project->delete();
+
+        return redirect()->route('admin.projects.index')->with('deleted', 'Il Progetto è stato cancellato correttamente');
     }
 }

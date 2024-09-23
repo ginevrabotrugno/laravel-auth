@@ -3,6 +3,12 @@
 @section('content')
 
     <div class="container my-4">
+        @if (session('deleted'))
+            <div class="alert alert-success" role="alert">
+                {{ session('deleted') }}
+            </div>
+        @endif
+
         <h1 class="my-5">I MIEI PROGETTI</h1>
 
         <table class="table">
@@ -29,9 +35,13 @@
                             <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-warning">
                                 <i class="fa-solid fa-pencil"></i>
                             </a>
-                            <a href="#" class="btn btn-danger">
-                                <i class="fa-solid fa-trash"></i>
-                            </a>
+                            <form action="{{route('admin.projects.destroy', $project)}}" method="POST" class="d-inline" onsubmit="return confirm('Sei sicuro di voler eliminare {{$project->title}}?')">
+                            @csrf
+                            @method('DELETE')
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
