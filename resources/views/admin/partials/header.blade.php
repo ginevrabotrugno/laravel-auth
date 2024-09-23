@@ -1,4 +1,4 @@
-<header class="bg-dark">
+<header class="bg-dark" style="height: 57px">
     <nav class="navbar navbar-expand-md bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">

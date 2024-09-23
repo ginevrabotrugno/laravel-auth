@@ -22,7 +22,20 @@
 <body>
 
     @include('admin.partials.header')
-    @yield('content')
+
+    <div class="my_wrapper">
+
+        @auth
+            <div class="my_sidebar">
+                @include('admin.partials.sidebar')
+            </div>
+        @endauth
+
+            <div class="my_container">
+                @yield('content')
+            </div>
+
+    </div>
 
 </body>
 
