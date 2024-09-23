@@ -8,9 +8,14 @@
                 {{ session('created') }}
             </div>
         @endif
+        @if (session('edited'))
+            <div class="alert alert-success" role="alert">
+                {{ session('edited') }}
+            </div>
+        @endif
         <h1>
             {{ $project->title }}
-            <a href="#" class="btn btn-warning">
+            <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-warning">
                 <i class="fa-solid fa-pencil"></i>
             </a>
             <a href="#" class="btn btn-danger">
