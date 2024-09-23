@@ -13,7 +13,7 @@
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a href=" {{ route('admin.projects.create') }} " class="nav-link text-white">
                 <i class="fa-solid fa-square-plus"></i>
                 <span>New</span>
             </a>
