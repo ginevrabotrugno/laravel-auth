@@ -33,11 +33,13 @@
             </div>
         @endauth
 
-            <div class="my_container">
-                @yield('content')
-            </div>
+        <div class="my_container">
+            @yield('content')
+        </div>
 
     </div>
+
+    @include('admin.partials.footer')
 
 </body>
 
