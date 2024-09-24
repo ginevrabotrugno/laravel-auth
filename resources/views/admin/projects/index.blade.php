@@ -9,7 +9,12 @@
             </div>
         @endif
 
-        <h1 class="my-5">I MIEI PROGETTI</h1>
+        <h1 class="my-5">
+            I MIEI PROGETTI
+            <a href="{{route('admin.projects.create')}}" class="btn btn-light">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+        </h1>
 
         <table class="table">
             <thead>
@@ -47,5 +52,7 @@
                 @endforeach
             </tbody>
         </table>
+        {{$projects->links()}}
     </div>
 @endsection
+
