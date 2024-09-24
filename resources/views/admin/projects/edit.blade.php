@@ -28,14 +28,14 @@
             </div>
             <div class="mb-3">
                 <label for="start_date" class="form-label">Data di Inizio</label>
-                <input name="start_date" type="date" class="form-control @error('start_date') is-invalid @enderror" id="start_date" value=" {{ old('start_date', $project->start_date) }}">
+                <input name="start_date" type="date" class="form-control @error('start_date') is-invalid @enderror" id="start_date" value="{{ old('start_date', $project->start_date ? $project->start_date->format('Y-m-d') : '') }}">
                 @error('start_date')
                     <small class="text-danger"> {{ $message }} </small>
                 @enderror
             </div>
             <div class="mb-3">
                 <label for="end_date" class="form-label">Data di Fine</label>
-                <input name="end_date" type="date" class="form-control @error('end_date') is-invalid @enderror" id="end_date" value=" {{ old('end_date', $project->end_date) }}">
+                <input name="end_date" type="date" class="form-control @error('end_date') is-invalid @enderror" id="end_date" value="{{ old('end_date', $project->end_date ? $project->end_date->format('Y-m-d') : '') }}">
                 @error('end_date')
                     <small class="text-danger"> {{ $message }} </small>
                 @enderror

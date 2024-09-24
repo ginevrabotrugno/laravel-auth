@@ -25,7 +25,7 @@ class ProjectsRequest extends FormRequest
             'title' => 'required|min:3|max:100',
             'start_date' => 'required',
             'status' => 'required|min:3|max:20',
-            'project_url' => 'active_url',
+            'project_url' => 'nullable|active_url',
             'technologies' => 'min:3|max:255'
         ];
     }
